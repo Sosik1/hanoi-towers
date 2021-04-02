@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hanoi Tower</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      canvas {
+        border: 3px solid white;
+        background-color: black;
+        width: 800px;
+        height: 600px;
+      }
+      body {
+        background-color: black;
+        color: white;
+        font-family: "Inconsolata", monospace;
+        text-align: center;
+      }
+      button {
+        border: 3px double white;
+        background-color: black;
+        border-radius: 0;
+        color: white;
+        font-size: 1.5rem;
+        outline: none;
+        margin-bottom: 25px;
+        padding: 0.33em;
+      }
+      button:hover {
+        border: 3px double black;
+        background-color: white;
+        color: black;
+      }
+      .main {
+        display: flex;
+        justify-content: center;
+      }
+      h1 {
+        margin: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hanoi Tower Algotithm</h1>
+    <button>Start</button>
+    <div class="main">
+      <canvas></canvas>
+    </div>
+    <script type="text/javascript" src="hanoi.js"></script>
+  </body>
+</html>
