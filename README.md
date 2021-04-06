@@ -3,7 +3,7 @@
 A cool Hanoi Tower Algorithm Visualiser
 Written in Vanilla Javascript Using Canvas
 
-**Live Demo:** https://determined-mcnulty-50daef.netlify.app
+**Live Demo:** <a href="https://determined-mcnulty-50daef.netlify.app" target="_blank">Click here</a>
 
 # What is Hanoi Towers
 
@@ -13,7 +13,7 @@ Initially this seems pretty easy but you'll see that the LIFO nature of the towe
 
 The solution to this problem is a very easy concept if solved recursively. You can find this function in this project under the name hanoi().
 
-More on the Hanoi towers: https://en.wikipedia.org/wiki/Tower_of_Hanoi
+More on the Hanoi towers: <a href="https://en.wikipedia.org/wiki/Tower_of_Hanoi" target="_blank">Wikipedia: Tower of Hanoi</a>
 
 # Thanks for taking a look!
 
