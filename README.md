@@ -3,6 +3,8 @@
 A cool Hanoi Tower Algorithm Visualiser
 Written in Vanilla Javascript Using Canvas
 
+** Live Demo: **https://determined-mcnulty-50daef.netlify.app
+
 # What is Hanoi Towers
 
 Hanoi towers is a problem where you need to move a tower made of disks of decreasing size. You have one extra tower that you can use. The only rule is that you cannot place a disk of a larger size on top of a smaller disk.
