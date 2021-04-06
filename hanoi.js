@@ -28,13 +28,18 @@ let c = [];
 
 //Controller
 async function start() {
-  await hanoi(TOWER_SIZE, a, b, c);
+  instructions = [];
+  iterator = 0;
+  await hanoi(TOWER_SIZE, "A", "B", "C");
+  console.log(instructions);
+  printFromInstructions();
 }
 
-async function move(from, to) {
+function move(fromName, toName) {
+  let from = parseName(fromName);
+  let to = parseName(toName);
   const element = from.pop();
   to.push(element);
-  await sleep(1000);
   display.clearRect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
   drawTowers(display);
   drawElements(display, a, 0);
@@ -42,12 +47,45 @@ async function move(from, to) {
   drawElements(display, c, 2);
 }
 
+let instructions = [];
 const hanoi = async function (n, from, helper, to) {
   if (n === 0) return;
   hanoi(n - 1, from, to, helper);
-  move(from, to);
+  logMove(from, to);
   hanoi(n - 1, helper, from, to);
 };
+
+let iterator = 0;
+function logMove(from, to) {
+  instructions[iterator] = { from, to };
+  iterator++;
+}
+
+let printIterator = 0;
+function printFromInstructions() {
+  if (printIterator < instructions.length) {
+    move(instructions[printIterator].from, instructions[printIterator].to);
+    setTimeout(printFromInstructions, 1000);
+    printIterator++;
+  }
+}
+
+function parseName(name) {
+  switch (name) {
+    case "A":
+      return a;
+      break;
+    case "B":
+      return b;
+      break;
+    case "C":
+      return c;
+      break;
+    default:
+      console.log("Wrong array name..");
+      break;
+  }
+}
 
 function setupCanvas() {
   const canvas = document.querySelector("canvas");
@@ -103,12 +141,7 @@ function dataInit() {
     a[i] = { color: colors[i], size: i };
   }
 }
-
-const sleep = (milliseconds) => {
-  return new Promise((resolve) => setTimeout(resolve, milliseconds));
-};
-
-//COLORS FROM OUTSIDE:
+//Rainbow color function by gitHub user emrahgunduz
 
 function generateRainbowColors(count) {
   function rainbow(numOfSteps, step) {
