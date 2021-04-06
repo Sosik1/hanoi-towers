@@ -3,7 +3,7 @@
 A cool Hanoi Tower Algorithm Visualiser
 Written in Vanilla Javascript Using Canvas
 
-** Live Demo: **https://determined-mcnulty-50daef.netlify.app
+**Live Demo:** https://determined-mcnulty-50daef.netlify.app
 
 # What is Hanoi Towers
 
